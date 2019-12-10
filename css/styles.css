@@ -1,0 +1,379 @@
+/* To be inlined */
+@font-face {
+    font-family: "Content-font";
+    src: local("Roboto Slab Regular"), local("RobotoSlab-Regular"), url(./fonts/Roboto_Slab/RobotoSlab-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-display: fallback;
+}
+@font-face {
+    font-family: "Content-font";
+    src: local("Roboto Slab Bold"), local("RobotoSlab-Bold"), url(./fonts/Roboto_Slab/RobotoSlab-Medium.ttf) format('truetype');
+    font-weight: 500;
+    font-display: fallback;
+}
+@font-face {
+    font-family: "Content-font";
+    src: local("Roboto Slab Bold"), local("RobotoSlab-Bold"), url(./fonts/Roboto_Slab/RobotoSlab-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-display: fallback;
+}
+
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+html, body {
+    color: #242A31;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    background: #F5F7F9;
+    box-sizing: border-box;
+    font-family: Content-font, sans-serif;
+    line-height: 1em;
+}
+
+.body {
+    color: #242A31;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    padding: 0;
+    background: #F5F7F9;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.header {
+    height: 80px;
+    display: flex;
+    padding: 0;
+    box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1);
+    border-bottom: 1px solid #d4dadf;
+    background-color: #242A31;
+    position: relative;
+}
+
+.header--container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    max-width: 1448px;
+}
+
+.header--title {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    padding: 0;
+    position: relative;
+    align-items: center;
+    color: #fdfdfd;
+}
+
+@media screen and (min-width: 1024px) {
+    .header--title {
+        max-width: 298px;
+        justify-content: center;
+    }
+
+
+    .header--title:after {
+        top: 50%;
+        right: 0;
+        height: 40px;
+        content: " ";
+        position: absolute;
+        transform: translateY(-50%);
+        border-left: 1px solid rgba(255, 255, 255, 0.3);
+    }
+}
+
+.header--title--mobileDrawerButton {
+    flex: 0 0 auto;
+    width: 30px;
+    cursor: pointer;
+    height: 30px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width: 1024px) {
+    .header--title--mobileDrawerButton {
+        display: none;
+    }
+}
+
+.header--title--content {
+    margin: 0;
+    display: block;
+    padding: 0 24px;
+    color: inherit;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .header--title--content {
+        width: 250px;
+        /* Want height 48px. 22px line height, so 13px padding complement /*/
+        line-height: 22px;
+        padding: 13px 0;
+        text-align: center;
+    }
+}
+
+
+.header--inner {
+    flex: 1 1 auto;
+    margin: 0 88px;
+    display: block;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    max-width: 750px;
+}
+
+.header--actions {
+    height: 80px;
+    margin: 0;
+    display: flex;
+    padding: 0;
+    position: relative;
+    max-width: 224px;
+    align-items: center;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .header--actions:before {
+        top: 50%;
+        left: 0;
+        height: 40px;
+        content: " ";
+        position: absolute;
+        transform: translateY(-50%);
+        border-left: 1px solid rgba(255, 255, 255, 0.3);
+    }
+}
+
+
+.header--action {
+    background: transparent center center no-repeat;
+    background-size: 24px 24px;
+    border: 0;
+    display: block;
+    height: 48px;
+    /* position: fixed; */
+    overflow: hidden;
+    text-indent: -9999px;
+    top: 4px;
+    width: 48px;
+    z-index: 30;
+    cursor: pointer;
+}
+
+.header--action.action--download {
+    /* TODO Use white image instead of black */
+    background-image: url("/images/download.svg");
+}
+
+.header--action.action--pdf {
+    background-image: url("/images/baseline_picture_as_pdf_white_24dp.png");
+}
+
+.bodyContent {
+    flex: 1;
+    color: #3B454E;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    padding: 0;
+    position: relative;
+}
+
+.contentNavigation {
+    margin: 0;
+    display: block;
+    padding: 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .contentNavigation {
+        flex: 0 0 auto;
+        width: calc((100% - 1448px) / 2 + 298px);
+        display: flex;
+        min-width: 298px;
+        background: #F5F7F9;
+        align-items: stretch;
+        border-right: 1px solid #E6ECF1;
+        padding-left: calc((100% - 1448px) / 2);
+        flex-direction: column;
+    }
+}
+
+.contentNavigation--mobileHeader {
+  color: #74818D;
+  height: 59px;
+  display: flex;
+  box-shadow: 0 1px 1px 0 rgba(116, 129, 141, 0.1);
+  align-items: stretch;
+  border-bottom: 1px solid #d4dadf;
+  background-color: #ffffff;
+}
+
+@media screen and (min-width: 1024px) {
+    .contentNavigation--mobileHeader {
+        display: none;
+    }
+}
+
+.contentNavigation--mobileHeader .action--back {
+    cursor: pointer;
+    display: flex;
+    padding: 8px 16px;
+    align-items: center;
+    background: url("/images/arrow-back-black.svg") center center no-repeat;
+    background-size: 24px 24px;
+    border: 0;
+    width: 56px;
+}
+
+.contentNavigation--tree {
+    display: block;
+    font-size: 15px;
+    margin: 32px 0 0 0;
+    padding: 16px 0 0 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .contentNavigation--tree {
+        padding-left: 24px;
+    }
+}
+
+.contentNavigation--itemGroup {
+    margin: 0;
+    display: block;
+    padding: 0;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.contentNavigation--itemGroup--titleContainer {
+    color: #9DAAB6;
+    border: 1px solid transparent;
+    margin: 0;
+    display: flex;
+    padding: 7px 24px 7px 16px;
+    position: relative;
+    align-items: center;
+    border-right: 0px;
+    text-decoration: none;
+
+    margin-left: -1px;
+}
+
+.contentNavigation--itemGroup--titleLabel {
+    /* TODO Might be missing some line height. Inner height should be 21px, we have 18px. */
+    font-size: 12px;
+    font-family: Content-font, Roboto, sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    word-break: break-word;
+
+}
+
+/*ul/ol; Within we don't have access to classes anymore (markdown limitation) */
+/* ul/ol can also be nested for multi levels table of content */
+.contentNavigation--itemGroup--itemsContainer {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.contentNavigation--itemGroup--itemsContainer ol {
+    padding: 0;
+}
+
+.contentNavigation--itemGroup--itemsContainer ol a,
+.contentNavigation--itemGroup--itemsContainer ul a {
+    padding-left: 36px; /* regular 16 + 20 ident*/
+}
+
+/* We only support three indentation levels */
+.contentNavigation--itemGroup--itemsContainer ol ol a,
+.contentNavigation--itemGroup--itemsContainer ul ul a {
+    padding-left: 56px; /* regular 16 + 2*20 ident*/
+}
+
+.contentNavigation--itemGroup--itemsContainer li {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.contentNavigation--itemGroup--itemsContainer a {
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: block;
+    padding: 7px 24px 7px 16px;
+    position: relative;
+    align-items: center;
+    border-right: 0;
+    text-decoration: none;
+    color: inherit;
+    font-size: 14px;
+    word-break: break-word;
+    font-family: Content-font, Roboto, sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.contentNavigation--itemGroup--itemsContainer a:hover {
+    background-color: #E6ECF1;
+}
+
+.contentNavigation--itemGroup--itemsContainer a.active {
+    border-color: #E6ECF1; /* !important; */
+    background-color: #ffffff;
+    color: rgb(20, 110, 230);
+}
+
+/* Hack-ish way of hiding the sidepanel right border on active element */
+.contentNavigation--itemGroup--itemsContainer .active:before {
+    content: " ";
+    position: absolute;
+    width: 1px;
+    height: 35px;
+    top: 0px;
+    right: -1px;
+    display: block;
+    background-color: white;
+}
+
+
+
+.contentPage {
+    flex: 1 1 auto;
+    margin:0;
+    display: flex;
+    padding: 0;
+    max-width: 100%;
+    min-width: 0;
+    background: #FFF;
+    flex-direction: column;
+}

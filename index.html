@@ -1,0 +1,137 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+    <div class="body">
+        <div class="header">
+            <div class="header--container">
+                <div class="header--title">
+                    <div class="header--title--mobileDrawerButton"></div>
+                    <a class="header--title--content" href="/">François Monniot</a>
+                </div>
+                <div class="header--inner"></div>
+                <div class="header--actions">
+                    <a class="header--action action--pdf" href="./downloads/resume.pdf">PDF</a>
+                    <button class="header--action action--print"></button>
+                </div>
+            </div>
+        </div>
+        <div class="bodyContent">
+            <div class="contentNavigation">
+                <div class="contentNavigation--inner">
+                    <div class="contentNavigation--mobileHeader">
+                        <button class="action--back"></button>
+                    </div>
+                    <div class="contentNavigation--tree">
+
+                        <!-- Start Group -->
+                        <div class="contentNavigation--itemGroup">
+                            <div class="contentNavigation--itemGroup--titleContainer">
+                                <span class="contentNavigation--itemGroup--titleLabel"></span>
+                            </div>
+                            <ul class="contentNavigation--itemGroup--itemsContainer">
+                                <li class="contentNavigation--itemGroup--itemContainer">
+                                    <a class="contentNavigation--itemGroup--itemLink active" href="/">Home</a>
+                                </li>
+                                <li class="contentNavigation--itemGroup--itemContainer">
+                                    <a class="contentNavigation--itemGroup--itemLink" href="/">Resume</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End Group -->
+
+                        <!-- Start Group -->
+                        <div class="contentNavigation--itemGroup">
+                            <div class="contentNavigation--itemGroup--titleContainer">
+                                <span class="contentNavigation--itemGroup--titleLabel">Table of Content</span>
+                            </div>
+                            <ol class="contentNavigation--itemGroup--itemsContainer">
+                              <li><a href="#prepare-your-hypervisor">Prepare your hypervisor</a>
+                                <ol>
+                                  <li><a href="#proxmox-user">Proxmox User</a></li>
+                                  <li><a href="#vm-dedicated-network">VM dedicated network</a></li>
+                                  <li><a href="#firewall">Firewall</a></li>
+                                </ol>
+                              </li>
+                              <li><a href="#template">Template</a>
+                                <ol>
+                                  <li><a href="#preparation">Preparation</a></li>
+                                  <li><a href="#create-the-base-image">Create the base image</a></li>
+                                </ol>
+                              </li>
+                              <li><a href="#generate-ssl-certificate">Generate SSL Certificate</a>
+                                <ol>
+                                  <li><a href="#root-authority">Root Authority</a></li>
+                                  <li><a href="#create-a-certificate">Create a certificate</a>
+                                    <ol>
+                                      <li><a href="#certificate-signing-request-(csr)">Certificate Signing Request (CSR)</a></li>
+                                      <li><a href="#sign-the-key">Sign the key</a></li>
+                                    </ol>
+                                  </li>
+                                  <li><a href="#bonus:-automate-the-creation">Bonus: Automate the creation</a></li>
+                                </ol>
+                              </li>
+                              <li><a href="#reverse-proxy">Reverse Proxy</a>
+                                <ol>
+                                  <li><a href="#hypervisor">Hypervisor</a></li>
+                                  <li><a href="#container">Container</a>
+                                    <ol>
+                                      <li><a href="#default-web-page">Default web page</a></li>
+                                      <li><a href="#proxmox-gui">Proxmox GUI</a></li>
+                                    </ol>
+                                  </li>
+                                </ol>
+                              </li>
+                              <li><a href="#enter-the-ldap-directory">Enter the LDAP directory</a>
+                                <ol>
+                                  <li><a href="#openldap-server">OpenLDAP Server</a></li>
+                                  <li><a href="#fusiondirectory">FusionDirectory</a>
+                                    <ol>
+                                      <li><a href="#repositories">Repositories</a></li>
+                                      <li><a href="#schema-installation">Schema installation</a></li>
+                                      <li><a href="#fusiondirectory-installation">Fusiondirectory installation</a></li>
+                                    </ol>
+                                  </li>
+                                  <li><a href="#add-ldap-admin-to-proxmox">Add LDAP admin to proxmox</a></li>
+                                </ol>
+                              </li>
+                              <li><a href="#git">Git</a>
+                                <ol>
+                                  <li><a href="#nginx-configurations">Nginx Configurations</a></li>
+                                  <li><a href="#ldap-integration">LDAP Integration</a></li>
+                                  <li><a href="#host-firewall">Host firewall</a></li>
+                                </ol>
+                              </li>
+                              <li><a href="#dns">DNS</a></li>
+                            </ol>
+                        </div>
+                        <!-- End Group -->
+
+                    </div>
+                </div>
+            </div>
+            <div class="contentPage">
+                <div class="contentPage--container">
+                    <div class="contentPage--page">
+                        <!-- INCLUDE CONTENT HERE -->
+                    </div>
+                    <div class="contentPage--footer"></div>
+                </div>
+                <div class="contentPage--side"></div>
+            </div>
+        </div>
+    </div>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
